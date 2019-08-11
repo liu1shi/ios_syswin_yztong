@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>main</key>
+	<string>http</string>
+	<key>header</key>
+	<string></string>
+	<key>content1</key>
+	<string>syzf</string>
+	<key>content2</key>
+	<string>syswinsoft</string>
+	<key>footer1</key>
+	<string>com</string>
+	<key>footer2</key>
+	<string></string>
+	<key>post</key>
+	<string>8188</string>
+	<key>params</key>
+	<string>/?OpenID=oIOPM0RooqwnSVNCtSKbPaNrZBUI&amp;#/tab</string>
+</dict>
+</plist>

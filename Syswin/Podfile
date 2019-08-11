@@ -1,0 +1,20 @@
+# Podfile文件说明：
+
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+    pod 'MJRefresh'
+    pod 'SVProgressHUD'
+    pod 'AFNetworking'
+    pod 'Masonry'
+    pod 'SDWebImage'
+
+target 'Syswin' do
+    pod 'WechatOpenSDK'
+    # pod 'UICollectionViewLeftAlignedLayout'
+    # pod 'JPush'
+    # pod 'UMengUShare/Social/ReducedWeChat'  #reduced 精简版
+	# pod 'UMengUShare/Social/ReducedQQ'
+	# pod ‘UMengUShare/Social/ReducedSina'
+	# pod 'AliyunPlayer_iOS/AliyunVodPlayerSDK'
+end

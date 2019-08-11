@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Demo</title>
+    <script>
+
+        function click1 () {
+            console.log('click1')
+            var obj = {
+                'callbackKey':'callbackValue'
+            }
+            window.webkit.messageHandlers.APP_LongClick.postMessage(obj)
+        }
+
+        function click2 () {
+            console.log('click2')
+            var obj = {
+                'callbackKey':'callbackValue'
+            }
+            window.webkit.messageHandlers.Native_Js_camera.postMessage(obj)
+        }
+    </script>
+</head>
+<body >
+    <div onClick="click1()" style="margin:50px;border:solid 2px #333;">下载图片</div>
+    <div onClick="click2()" style="margin:50px;border:solid 2px #333;">相机</div>
+</body>
+</html>
