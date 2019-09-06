@@ -12,8 +12,8 @@
 
 ///接口地址
 //static NSString *const kMainHost = @"https://fydadmnew.my089.com";                //线上环境
-static NSString *const kMainHost = @"http://172.31.118.201:7080/#/tab";             //测试环境
-//static NSString *const kMainHost = @"http://syzf.syswinsoft.com:8188/#/tab";        //线上环境
+//static NSString *const kMainHost = @"http://172.31.118.201:7080/#/tab";             //测试环境
+static NSString *const kMainHost = @"http://syzf.syswinsoft.com:8188/#/tab";        //线上环境
 
 static NSString *const kWechatAppId = @"wx66a0829983d09056";                 //微信APPID
 
