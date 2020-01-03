@@ -53,6 +53,12 @@
     self.webview.UIDelegate = self;
     [self.view addSubview:self.webview];
     
+    if (_localUrl) {
+        [self setLocalUrl:_localUrl];
+    } else if(_onlineUrl) {
+        [self setOnlineUrl:_onlineUrl];
+    }
+    
     [self.webview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         if (@available(iOS 11.0, *)) {
@@ -188,25 +194,27 @@ didFailProvisionalNavigation:(WKNavigation *)navigation{
 
 - (void)userContentController:(WKUserContentController *)userContentController
       didReceiveScriptMessage:(WKScriptMessage *)message {
-    
-//  js 和 native 交互
-//  window.webkit.messageHandlers.Share.postMessage({title:'标题',content:'内容',url:'http://www.baidu.com'});
-//    [_webview evaluateJavaScript:@"" completionHandler:nil];
-//    [message.name isEqualToString:@"Share"]
+
     [self jsToNativeType:message.name data:message.body];
 }
 
 
-- (void)webviewFinishLoad {
+- (void)webviewFinish {
     
 }
 
-- (void)webviewFailLoad {
+- (void)webviewFail {
     
 }
 
-///js 向native传参 type标识触发的哪个动作 传来的参数
 - (void)jsToNativeType:(NSString *)type data:(id)data {
+    //js 发送数据方法
+    // window.webkit.messageHandlers.share.postMessage({title:'标题',content:'内容'});
+}
+
+- (void)nativeToJs:(NSString *)data {
+    // share('')
+    [_webview evaluateJavaScript:data completionHandler:nil];
 }
 
 - (void)jsDealloc {

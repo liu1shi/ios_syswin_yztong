@@ -17,12 +17,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)  NSString *localUrl;       //本地的url地址
 @property (nonatomic,strong)  NSString *onlineUrl;      //服务器端的url地址
 
-//webview完成加载后触发
-- (void)webviewFinishLoad;
-//webview加载失败后触发
-- (void)webviewFailLoad;
-///js 向native传参 type标识触发的哪个动作 dataArr传来的参数
+// webview完成加载后触发
+- (void)webviewFinish;
+// webview加载失败后触发
+- (void)webviewFail;
+// js 向 native传参, type标识触发的哪个动作, data传来的参数
 - (void)jsToNativeType:(NSString *)type data:(id)data;
+// native 向 js 传参,data 方法名和参数
+- (void)nativeToJs:(NSString *)data;
 
 @end
 
